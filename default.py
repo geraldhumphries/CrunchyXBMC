@@ -10,10 +10,11 @@ You should have received a copy of the GNU General Public License along with thi
 import sys
 import xbmcaddon
 
-#plugin constants
+
+# plugin constants
 __plugin__ = "Crunchyrollxbmc"
 __version__ = "2.1.0"
-__XBMCBUILD__ = xbmc.getInfoLabel( "System.BuildVersion" )
+__XBMCBUILD__ = xbmc.getInfoLabel("System.BuildVersion")
 __settings__ = xbmcaddon.Addon(id='plugin.video.crunchyroll-takeout')
 __language__ = __settings__.getLocalizedString
 
@@ -21,6 +22,7 @@ xbmc.log("[PLUGIN] '%s: version %s' initialized!" % (__plugin__, __version__))
 
 if __name__ == "__main__":
     from resources.lib import crunchy_main
+
     crunchy_main.Main()
-    
+
 sys.modules.clear()
